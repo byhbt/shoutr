@@ -5,11 +5,8 @@
     <%= render partial: '/users/form', object: form %>
 
     <div class="submit-field">
-      <%= form.submit %>
-    </div>
-
-    <div class="other-links">
-      <%= link_to t(".sign_in"), sign_in_path %>
+      <%= form.submit "Sign up", :class => 'btn btn-primary' %>
+      <%= link_to t(".sign_in"), sign_in_path, :class => 'btn btn-primary' %>
     </div>
   <% end %>
 </div>
