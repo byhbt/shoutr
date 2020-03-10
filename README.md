@@ -21,4 +21,6 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+* First episode:
+- User clearance controller/model
+- Override session
