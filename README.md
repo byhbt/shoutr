@@ -1,26 +1,11 @@
-# README
+# Tutorials review:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Episode 1:
+- Install Rails + Clearance
+- Add new migration
 
-Things you may want to cover:
+## Episode 2:
+- Override Clearance Controller
+- Add field user name in Registration
+- Override Session controller to allow by username and email.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* First episode:
-- User clearance controller/model
-- Override session

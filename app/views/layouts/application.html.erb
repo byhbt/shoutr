@@ -4,7 +4,6 @@
     <title>Shoutr</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -18,8 +17,8 @@
         <div id="navbar">
           <ul class="nav navbar-nav">
             <% if signed_in? %>
-              Signed in as: <%= current_user.email %>
-              <li><span><%= link_to 'Sign out', sign_out_path, method: :delete %></span></li>
+              <li><a href="#"><%= current_user.email %></a></li>
+              <li><%= link_to 'Sign out', sign_out_path, method: :delete %></li>
             <% else %>
               <li><%= link_to 'Sign in', sign_in_path %></li>
             <% end %>
