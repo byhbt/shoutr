@@ -3,10 +3,13 @@
 <div class="row">
   <div class="col-sm-12">
     <%= form_for @shout do |form| %>
-      <%= form.text_field :body, placeholder: "Shout here!", require: true, class: 'form-control' %>
+      <%= form.field_for :content do |content_form| %>
+      <%= content_form.text_field :body, placeholder: "Shout here!", required: true, class: 'form-control' %>
+      <% end %>
       <%= form.submit "Shout!", class: 'btn btn-primary' %>
     <% end %>
   </div>
 </div>
 
+<%# https://thoughtbot.com/blog/rendering-collections-in-rails %>
 <%= render @shouts %>

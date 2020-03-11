@@ -1,17 +1,15 @@
 <div class="row">
   <div class="col-sm-12">
-    <% @shouts.each do |shout| %>
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <%= link_to shout.username, shout.user %> -
-        <%= link_to shout do %>
-          <%= time_ago_in_words(shout.created_at) %>
-        <% end %>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <%= link_to shout.username, shout.user %> -
+          <%= link_to shout do %>
+            <%= time_ago_in_words(shout.created_at) %>
+          <% end %>
+        </div>
+        <div class="panel-body">
+          <%= shout.content.body %>
+        </div>
       </div>
-      <div class="panel-body">
-        <%= shout.body %>
-      </div>
-    </div>
-    <% end %>
   </div>
 </div>
