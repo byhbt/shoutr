@@ -1,19 +1,18 @@
 Rails.application.routes.draw do
   get 'dashboards/show'
-  # root "homes#show"
 
   constraints Clearance::Constraints::SignedIn.new do
     root to: "dashboards#show"
   end
 
   resources :passwords, controller: "clearance/passwords", only: [:create, :new]
-  resource :session, only: [:create]
-
-  resources :users, only: [:create] do
+  resources :shouts, only: [:create, :show]
+  resources :users, only: [:create, :show] do
     resource :password,
       controller: "clearance/passwords",
       only: [:edit, :update]
   end
+  resource :session, only: [:create]
 
   get "/sign_in" => "sessions#new", as: "sign_in"
   delete "/sign_out" => "sessions#destroy", as: "sign_out"

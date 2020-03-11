@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-sm-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <%= link_to @shout.username, @shout.user %> -
+        <%= link_to @shout do %>
+          <%= time_ago_in_words(@shout.created_at) %>
+        <% end %>
+      </div>
+      <div class="panel-body">
+        <%= @shout.body %>
+      </div>
+      <div class="panel-footer">
+        <a href="#">Back to previous page</a>
+      </div>
+    </div>
+  </div>
+</div>
