@@ -1,4 +1,4 @@
-# Tutorials review:
+# Tutorials recap:
 
 ## Episode 1:
 - Install Rails + Clearance
@@ -12,3 +12,8 @@
 
 ## Episode 3:
 - Use Clearance to redirect.
+- Implement migration from moving data from Shout to TextShout
+
+## Episode 4:
+- Polymorphic relationship between Shout vs TextShout and PhotoShout
+- Upload image with paper clip.
