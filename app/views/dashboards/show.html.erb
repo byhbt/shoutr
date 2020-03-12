@@ -3,7 +3,7 @@
 <div class="row">
   <div class="col-sm-12">
     <%= form_for @shout do |form| %>
-      <%= form.field_for :content do |content_form| %>
+      <%= form.fields_for :content do |content_form| %>
       <%= content_form.text_field :body, placeholder: "Shout here!", required: true, class: 'form-control' %>
       <% end %>
       <%= form.submit "Shout!", class: 'btn btn-primary' %>
