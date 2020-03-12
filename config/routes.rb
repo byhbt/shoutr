@@ -6,7 +6,13 @@ Rails.application.routes.draw do
   end
 
   resources :passwords, controller: "clearance/passwords", only: [:create, :new]
-  resources :shouts, only: [:create, :show]
+  resources :shouts, only: [:create, :show] do
+    member do
+      post "like" => "likes#create"
+      delete "unlike" => "likes#destroy"
+    end
+  end
+
   resources :users, only: [:create, :show] do
     resource :password,
       controller: "clearance/passwords",
